@@ -1,7 +1,10 @@
-Function: Search for the target object. If found, return True; otherwise, return False. When the target object is found, return the distance from the object to the robot. 
+Function: Publish three topic to two nodes.
+1.ros_gz_bridge
+2.YOLO object detection
 
-Input: No 
-
-Output: Whether there is an object (Boolean), distance (float) 
+Topics:
+/depth_camera/color/image_raw
+/depth_camera/depth/image_raw
+/depth_camera/depth/points
 
   
