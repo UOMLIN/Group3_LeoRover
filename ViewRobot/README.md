@@ -1,7 +1,8 @@
 This folder contains the main launch file of the whole robot
 It contains ros_gz_bridge, slam, navigation, and twist_mux.
 
-Simulation Publishers:
+**Simulation Publishers:**
+
 odometry (diff. drive wheel dead reckoning) - /odom
 
 IMU - /imu
@@ -10,7 +11,7 @@ Laser scan - /scan
 
 Depth camera  - /depth
 
-Simulation Subscribers:
+**Simulation Subscribers:**
 
 Command velocity - /robot/cmd_vel
 
