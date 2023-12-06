@@ -1,5 +1,10 @@
-Function: Detect whether there are obstacles (including obstacles and targets) in front of the robot without distinguishing the type of item. 
+Function: 
+Return the real-time view to the external display（Display screen） so that the user can see the robot's perspective
 
-Input: No 
+Topics:
+/camera/color/image_raw
 
-Output: Distance (float) 
+/camera/color/camera_info
+
+
+
