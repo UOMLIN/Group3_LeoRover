@@ -1,5 +1,7 @@
-Function: Surrounding detection to check if there are any objects (including obstacles and targets) without distinguishing the type of item. 
+Function:
 
-Input: No 
+Scan the map to identify obstacles and publish /scan topic to the bridge
 
-Output: Distance (float) 
+Topic publish : /scan
+
+Node Subscribe: None
