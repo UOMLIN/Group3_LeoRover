@@ -13,5 +13,5 @@ Topics:
 /depth_camera/depth/points
 
 
-                                                                                                                                                Contributor: Ionut Ionita
+                                      Contributor: Ionut Ionita
   
