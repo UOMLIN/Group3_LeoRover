@@ -5,3 +5,5 @@ Using a mathematical algorithm calculates the object's relative position and the
 Publishes the /target_position to the End Effector. 
 
 Subscribe to End effector /end_effector(Boolean)
+
+Contributor: Thomas Madeley
