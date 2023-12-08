@@ -6,4 +6,4 @@ Publishes the /target_position to the End Effector.
 
 Subscribe to End effector /end_effector(Boolean)
 
-Contributor: Thomas Madeley
+Contributor: Adarsh Karan Kesavadas Prasanth
