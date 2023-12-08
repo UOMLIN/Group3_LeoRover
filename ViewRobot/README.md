@@ -26,3 +26,5 @@ Twist Mux Subscribers:
  User command velocity - /teleop_cmd_vel
 
  Autonomous Nav command velocity - /nav_cmd_vel
+
+Contributor:Jingchuan Lin
