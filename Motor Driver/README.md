@@ -2,4 +2,4 @@ Subscribe message from ros_gz_bridge to receive the ideal wheel velocity and pub
 
 Publish back the real cmd_vel from robot to ros_gz_bridge.
 
-Contributor: Jingchuan Ln
+Contributor: Jingchuan Lin
