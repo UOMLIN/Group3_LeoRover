@@ -8,5 +8,5 @@ Topics:
   
   /camera/color/camera_info
 
-
+                           Contributor: Ionut Ionita
 
