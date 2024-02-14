@@ -12,3 +12,11 @@ Start simulation:
     source install/setup.bash
     
     ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=px150
+
+RVIZ simulation
+
+1. The whole package could be 'colcon build' when connecting to the manipulator
+   
+2. Run the control file
+   
+3.Under folder interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/interbotix_xsarm_control/demos/python_ros2_api can change the xyz pose.  
