@@ -20,3 +20,9 @@ RVIZ simulation
 2. Run the control file
    
 3.Under folder interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/interbotix_xsarm_control/demos/python_ros2_api can change the xyz pose.  
+
+Grasping:
+
+1. Grasping raw code inside
+2.     interbotix_ros_arms/interbotix_sdk/src/interbotix_sdk/robot_manipulation.py
+3.     function:open_gripper
