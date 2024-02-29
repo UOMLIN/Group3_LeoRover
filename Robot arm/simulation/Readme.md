@@ -16,9 +16,9 @@ https://docs.trossenrobotics.com/interbotix_xsarms_docs/ros_interface/ros2/softw
     ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=px150 use_sim:=true
 
 ## Next, in another terminal, navigate to the simulation directory and run the command
-    python3 bartender.py
-Grasping:
+    python3 group3.py
 
-1. Grasping raw code inside
-2.     interbotix_ros_arms/interbotix_sdk/src/interbotix_sdk/robot_manipulation.py
-3.     function:open_gripper
+# During actual operation, remove the final 'use_sim' call. Directly use 
+    ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=px150
+    python3 group3.py
+
