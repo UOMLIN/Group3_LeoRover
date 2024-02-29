@@ -1,4 +1,4 @@
-#Install rosdep package using following command:
+# Install rosdep package using following command:
 
     sudo apt install python3-rosdep2
     
@@ -8,7 +8,7 @@ Follow the step on offical documents to the step ROS 2 Quickstart Guide:
 
 https://docs.trossenrobotics.com/interbotix_xsarms_docs/ros_interface/ros2/software_setup.html
 
-#Start simulation:
+# Start simulation:
 ## First colcon build and launch the rviz
 
     source install/setup.bash
