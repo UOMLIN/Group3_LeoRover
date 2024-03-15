@@ -59,7 +59,9 @@ def main():
         bot.core.get_logger().fatal('This demo requires the robot to have at least 5 joints!')
         bot.shutdown()
         sys.exit()
-
+        
+# Modify the lower limit
+    bot.gripper.left_finger_lower_limit = 0.1
 # Working code
     bot.arm.go_to_home_pose()
     bot.gripper.release()
