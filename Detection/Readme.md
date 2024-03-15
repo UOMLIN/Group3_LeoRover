@@ -1,1 +1,1 @@
-![RQT]([https://github.com/UOMLIN/Group3_LeoRover/blob/main/Detection/MicrosoftTeams-image.jpeg)https://github.com/UOMLIN/Group3_LeoRover/blob/main/Detection/MicrosoftTeams-image.jpeg])
+![Figure](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Detection/MicrosoftTeams-image.jpeg)
