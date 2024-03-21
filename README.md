@@ -1,3 +1,104 @@
+### Component Interaction
+
+- The **Battery** supplies power to the **Power Distribution System**. This Power Distribution System manages the power and distributes it to the **Control system** and the **robot arm**.
+
+- **Intel NUC 12 Pro** serves as the main control unit communicating with **Raspberry Pi 4B** and **LeoCore** via ROS2, processing data from the **RPLIDAR** and **RealSense camera** and controlling the **PincherX 150 robot arm**.
+
+- The **RPLIDAR**, mounted on the Leo Rover, is used to build the map and occupancy grid using **SLAM** to perform Autonomous Navigation.
+
+- The **WiFi Adapter** provides network connectivity through the **WiFi Antenna**.
+
+- The **Raspberry Pi 4B** processes visual data from the **RGB camera** and handles wireless communication.
+
+- The **LeoCore** directly controls the **Wheels**, each powered by a Buehler DC motor with an encoder.
+
+- The **PincherX 150 robot arm** receives the object coordinate information from the depth camera and grabs the object. After grabbing, it puts it into the rear basket and returns to the resting position of the manipulator.
+
+![System_block_diagram](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/System_block_diagram.png)
+
+## Electrical Design
+
+### Power Connection diagram
+
+![Power Connections](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/LeoRover_powerConnections.png)
+
+### Components
+
+**Wheels**
+- **Motors:** 4 x in-hub DC motor with 73.2:1 planetary gearbox and 12 CPR encoder
+- **Wheel diameter:** 130 mm
+- **Tire material:** rubber with foam insert (non-pneumatic)
+
+**Battery**
+- **Voltage:** 11.1 V DC
+- **Capacity:** 5800 mAh
+- **Type:** Li-Ion with internal PCM (short-circuit, overcurrent, and overdrain safety features)
+- **Max. current:** 8A (total for the whole Rover)
+
+**Network**
+- **Primary modem:** WiFi 2.4 GHz access point with an external antenna.
+- **Secondary modem:** WiFi 2.4 GHz + 5 GHz on internal RPi antennas for connectivity
+
+**Sensors**
+- **Lidar:** RPLiDAR A2M12 (360° 2D Scanner)
+- **Camera:** Intel RealSense Camera D435i
+- **Depth camera:** RGB Camera 5 MPx (Fisheye lens)
+- **IMU:** Grove - IMU 9DOF v2.0
+
+**Control**
+- **Main computer:** Intel NUC 12 Pro
+- **Second computer:** RaspberryPi 4B
+- **Electronics board:** LeoCore as a real-time microcontroller with STM32F4
+
+**Manipulator:**
+- **PincherX 150 Robot Arm**
+
+### Power Connections Explanations
+
+#### Controller
+The power management system of the rover is coordinated by the LeoCore Controller, serving a central role in both power distribution and motor control. This controller seamlessly interfaces with the Raspberry Pi 4B and the Intel NUC 12 Pro through UART and RJ 45 Ethernet connections, respectively.
+
+#### Wireless Communication
+- Wireless connectivity is managed through the Raspberry Pi 4B, functioning as a central hub for communication, for the Alfa AWUS036ACS AC600 Wireless Adapter integrated via the Universal Serial Bus (USB) interface.
+- The Intel NUC 12 Pro establishes connections with sensors—RPLiDAR, Intel RealSense D435i, and PincherX 150 Robot Arm—all operating through USB interfaces.
+
+#### Motor Control
+- Utilizing Pulse Width Modulation (PWM) techniques, the LeoCore Controller ensures precise control over four powerful 12V Buehler Brushless DC motors, each with a maximum torque of 1 Nm.
+- The LeoCore Controller also interfaces with the Power Distribution System Box via its dedicated PWR port, ensuring an optimal power supply to all connected components.
+
+#### Visual Perception
+- A 5MPx RGB Camera, equipped with a fisheye lens and operating at 5V, interfaces with the Raspberry Pi 4B via the MIPI Camera Serial Interface (CSI)-2 interface.
+- Additionally, the RPLiDAR A2M12 2D Laser Range Scanner, connected to the Intel NUC through a UART-to-USB converter and operating at 5V, captures data for autonomous navigation, employing SLAM technology.
+- Further, the Intel RealSense D435i Depth Camera, which operates at 3.3V, is instrumental in object identification.
+
+#### Manipulator
+- The PincherX 150 Robot Arm is equipped with a U2D2 controller, which is a USB to Transistor-Transistor logic (TTL) converter, enabling precise control of DYNAMIXEL servos.
+- Simultaneously, the Power Hub Board, operating at 12V, facilitates efficient power distribution from the Power Distribution System to individual DYNAMIXEL servos.
+
+#### Power
+- At the core of the Leo Rover's energy source is an 11.1V, 5800mAh Li-Ion battery, capable of delivering a maximum current of 8A.
+- Charging is facilitated through the Power Distribution System, utilizing a 12V AC to DC adapter.
+- An LED indicator on the battery unit provides a visual cue, indicating the operational status of the rover.
+
+### Power Analysis
+
+| Components                                    | Voltage(max) (V) | Current(max) (A) | Power(max) (W) |
+|-----------------------------------------------|------------------|-------------------|----------------|
+| LeoCore Controller                            | 12               | 3                 | 36             |
+| RaspberryPI 4B                                | 5                | 3                 | 15             |
+| Wheels Buehler Motors 1.61.077.414           | 12               | 0.86 (stall current) | 41.3 approx   |
+| Wheel Encoders - Pololu Romi magnetic encoders | 12               | 0.006             | 0.288 approx  |
+| 2.4 GHz Antenna module                        | 3.3              | 0.115 (in transmit mode) | 0.38 approx   |
+| Intel NUC 12 Pro                              | 12               | -                 | 100 (peak under load) |
+| RPLiDAR A2M12                                | 5                | 0.6               | 3              |
+| Intel RealSense D435i                        | 5                | 0.7               | 3.5            |
+| 5MP RGB Camera                                | 3.3              | 0.25              | 0.83           |
+| PincherX 150 Robot Arm - DYNAMIXEL U2D2 power hub | 
+
+
+### Software Design
+
+
 1. Data is collected from three sensors, with depth camera data being sent to `ros_gz_bridge` and YOLO Object Detection. Radar data is also sent to `ros_gz_bridge`, and Leo camera data is sent to an external display, allowing users to see the robot's perspective.
 
 2. After receiving information from radar and IMU, `ros_gz_bridge` publishes the data to the Slam toolbox, enabling the robot to map and identify obstacles ahead.
