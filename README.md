@@ -1,3 +1,24 @@
+#LEO ROVER_GROUP 3
+<p align="center">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/leoRover.jpg?raw=true" alt="Leo Rover" width="600">
+  <br>
+  <em>Leo Rover</em>
+</p>
+
+### Autonomous Navigation and SLAM
+A navigation algorithm has been developed for the Leo Rover to autonomously explore unknown environments and return to its initial location. The navigation utilizes Nav2 stack in ROS2, while mapping is conducted using SLAM_toolbox. The rover localizes itself using data from Lidar, odometry, and IMU sensors in the simulated Gazebo world. Exploration is facilitated through Frontier Based Exploration techniques. 
+<p align="center">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/LeoRover%20navigating%20autonomously%20in%20an%20unknown%20environment.png?raw=true" alt="Navigation" width="600">
+  <br>
+  <em>LeoRover navigating autonomously in an unknown environment</em>
+</p>
+The entire setup is visualized using the Rviz tool and must now be implemented on the real rover for testing in real-world environments. Additionally, parameters will require fine-tuning based on tests conducted in the actual environment.
+<p align="center">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/RViz%20Navigation.png?raw=true" alt="Visualization" width="600">
+  <br>
+  <em>RViz Visualization</em>
+</p>
+
 ### Component Interaction
 
 - The **Battery** supplies power to the **Power Distribution System**. This Power Distribution System manages the power and distributes it to the **Control system** and the **robot arm**.
