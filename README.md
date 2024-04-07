@@ -1,4 +1,5 @@
-#LEO ROVER_GROUP 3
+
+# LEO ROVER_GROUP 3
 <p align="center">
   <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/leoRover.jpg?raw=true" alt="Leo Rover" width="600">
   <br>
