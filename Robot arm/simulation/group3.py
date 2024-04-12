@@ -33,18 +33,17 @@ import sys
 from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
 import numpy as np
 
+
 """
-This script makes the end-effector perform pick, pour, and place tasks.
-Note that this script may not work for every arm as it was designed for the wx250.
-Make sure to adjust commanded joint positions and poses as necessary.
+This script makes the end-effector go to a specific pose by defining the pose components
 
 To get started, open a terminal and type:
 
-    ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=wx250
+    ros2 launch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250
 
 Then change to this directory and type:
 
-    python3 bartender.py
+    python3 ee_pose_components.py
 """
 
 
@@ -55,38 +54,39 @@ def main():
         gripper_name='gripper'
     )
 
-    if (bot.arm.group_info.num_joints < 5):
-        bot.core.get_logger().fatal('This demo requires the robot to have at least 5 joints!')
-        bot.shutdown()
-        sys.exit()
-        
-# Modify the lower limit
-    bot.gripper.left_finger_lower_limit = 0.1
-# Working code
+    bot.gripper.left_finger_lower_limit=0.01
+
+
     bot.arm.go_to_home_pose()
     bot.gripper.release()
-    bot.arm.set_single_joint_position(joint_name='wrist_angle', position=np.pi / 2.0)
-    bot.arm.set_ee_cartesian_trajectory(x=0, z=-0.35)
-    bot.gripper.grasp()
-    bot.arm.set_ee_cartesian_trajectory(x=0, z=0.35)
-    bot.arm.set_single_joint_position(joint_name='wrist_angle', position=0.0)
-    bot.arm.set_single_joint_position(joint_name='waist', position=-np.pi, moving_time=4)
+    bot.arm.set_ee_pose_components(x=0.2, z=0,pitch=1.5, moving_time=4)
+    bot.gripper.grasp(3)
+    bot.arm.set_ee_pose_components(x=-0.25,z=0.15,moving_time=4)
     bot.gripper.release()
     bot.gripper.grasp()
     bot.arm.go_to_home_pose()
     bot.arm.go_to_sleep_pose()
 
-# Test code
-#     bot.arm.go_to_home_pose()
-#     bot.arm.set_single_joint_position(joint_name='wrist_angle', position=np.pi / 2.0)
-#     bot.arm.set_single_joint_position(joint_name='wrist_rotate', position=np.pi / 2.0)
-#     bot.arm.go_to_home_pose()
-#     bot.arm.go_to_sleep_pose()
-
-
-
     bot.shutdown()
 
+     
 
 if __name__ == '__main__':
     main()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
