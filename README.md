@@ -17,6 +17,7 @@
   - [Power Connections Explanations](#power-connections-explanations)
   - [Power Analysis](#power-analysis)
 - [Software Design](#software-design)
+- [Mechanical Design](#mechanical-design)
 
 ## Who are we? <a name="who-are-we"></a>
 <p align="center">
@@ -180,3 +181,14 @@ The power management system of the rover is coordinated by the LeoCore Controlle
 ![Decision Tree](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Decision%20Tree.jpg)
 
 ![RQT](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/RQT_Final.jpg)
+
+### Mechanical Design <a name="mechanical-design"></a>
+
+Mechanically there are two main areas of the project: the equipment mounting structure, and the payload container. The former shall support all the sensors, computing equipment, the manipulator and any other components necessary for the operation of the robot, while the container’s purpose is to store the payload items collected by the arm and deposit them on the ground once the desired rover pose is reached.
+
+<p align="center">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Mech%20Des1.png?raw=true" alt="Mechanical Design" width="800">
+  <br>
+  <em>Mechanical Design
+</em>
+</p>
