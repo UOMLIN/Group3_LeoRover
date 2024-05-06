@@ -6,9 +6,21 @@
   <em>Leo Rover</em>
 </p>
 
-### Who are we?
+## Table of Contents
+- [Who are we?](#who-are-we)
+- [Bridging Theory and Real-World Robotics](#robot-implementation)
+- [Autonomous Navigation and SLAM](#autonomous-navigation-and-slam)
+- [Component Interaction](#component-interaction)
+- [Electrical Design](#electrical-design)
+  - [Power Connection diagram](#power-connection-diagram)
+  - [Components](#components)
+  - [Power Connections Explanations](#power-connections-explanations)
+  - [Power Analysis](#power-analysis)
+- [Software Design](#software-design)
+
+## Who are we? <a name="who-are-we"></a>
 <p align="center">
-  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Final%20Leo.jpg?raw=true?raw=true" alt="Team" width="600">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Team3.jpg?raw=true" alt="Team" width="600">
   <br>
   <em>(Left to Right) Jingchuan Lin, Ionut Ionita, Thomas Madeley, Adarsh Karan Kesavadas Prasanth
 </em>
@@ -20,7 +32,7 @@ We are a team of four passionate robotics engineers from the University of Manch
 - Thomas Madeley
 - Adarsh Karan Kesavadas Prasanth
 
-### Bridging Theory and Real-World Robotics
+### Bridging Theory and Real-World Robotics <a name="robot-implementation"></a>
 
 Our year-long capstone project, the LEO Rover Design Project, provided a valuable opportunity to bridge the gap between theoretical knowledge and the practical challenges of real-world robotics. We successfully designed, developed, and tested a functional LEO rover equipped with the following capabilities:
 
