@@ -42,7 +42,7 @@ Our year-long capstone project, the LEO Rover Design Project, provided a valuabl
 
 Each of the functions is explained in the following sections:
 
-### Autonomous Navigation and SLAM
+### Autonomous Navigation and SLAM <a name="autonomous-navigation-and-slam"></a>
 A navigation algorithm has been developed for the Leo Rover to autonomously explore unknown environments and return to its initial location. The navigation utilizes the Nav2 stack in ROS2, while mapping is conducted using the SLAM_toolbox. The rover localizes itself using data from Lidar, odometry, and IMU sensors in the simulated Gazebo world. Exploration is facilitated through Frontier Based Exploration techniques. 
 <p align="center">
   <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/LeoRover%20navigating%20autonomously%20in%20an%20unknown%20environment.png?raw=true" alt="Navigation" width="600">
@@ -56,7 +56,7 @@ The entire setup is visualized using the Rviz tool and must now be implemented o
   <em>RViz Visualization</em>
 </p>
 
-### Component Interaction
+### Component Interaction <a name="component-interaction"></a>
 
 - The **Battery** supplies power to the **Power Distribution System**. This Power Distribution System manages the power and distributes it to the **Control system** and the **robot arm**.
 
@@ -74,13 +74,13 @@ The entire setup is visualized using the Rviz tool and must now be implemented o
 
 ![System_block_diagram](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/System_block_diagram.png)
 
-## Electrical Design
+## Electrical Design <a name="electrical-design"></a>
 
-### Power Connection diagram
+### Power Connection diagram <a name="power-connection-diagram"></a>
 
 ![Power Connections](https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/LeoRover_powerConnections.png)
 
-### Components
+### Components <a name="components"></a>
 
 **Wheels**
 - **Motors:** 4 x in-hub DC motor with 73.2:1 planetary gearbox and 12 CPR encoder
@@ -111,9 +111,9 @@ The entire setup is visualized using the Rviz tool and must now be implemented o
 **Manipulator:**
 - **PincherX 150 Robot Arm**
 
-### Power Connections Explanations
+### Power Connections Explanations <a name="power-connections-explanations"></a>
 
-#### Controller
+#### Controller 
 The power management system of the rover is coordinated by the LeoCore Controller, serving a central role in both power distribution and motor control. This controller seamlessly interfaces with the Raspberry Pi 4B and the Intel NUC 12 Pro through UART and RJ 45 Ethernet connections, respectively.
 
 #### Wireless Communication
@@ -138,7 +138,7 @@ The power management system of the rover is coordinated by the LeoCore Controlle
 - Charging is facilitated through the Power Distribution System, utilizing a 12V AC to DC adapter.
 - An LED indicator on the battery unit provides a visual cue, indicating the operational status of the rover.
 
-### Power Analysis
+### Power Analysis <a name="power-analysis"></a>
 
 | Components                                    | Voltage(max) (V) | Current(max) (A) | Power(max) (W) |
 |-----------------------------------------------|------------------|-------------------|----------------|
@@ -154,7 +154,7 @@ The power management system of the rover is coordinated by the LeoCore Controlle
 | PincherX 150 Robot Arm - DYNAMIXEL U2D2 power hub | 
 
 
-### Software Design
+### Software Design <a name="software-design"></a>
 
 
 1. Data is collected from three sensors, with depth camera data being sent to `ros_gz_bridge` and YOLO Object Detection. Radar data is also sent to `ros_gz_bridge`, and Leo camera data is sent to an external display, allowing users to see the robot's perspective.
