@@ -1,10 +1,34 @@
 
 # LEO ROVER GROUP-3
 <p align="center">
-  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/leoRover.jpg?raw=true" alt="Leo Rover" width="600">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Final%20Leo.jpg?raw=true?raw=true" alt="Leo Rover" width="800">
   <br>
   <em>Leo Rover</em>
 </p>
+
+### Who are we?
+<p align="center">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Final%20Leo.jpg?raw=true?raw=true" alt="Team" width="600">
+  <br>
+  <em>(Left to Right) Jingchuan Lin, Ionut Ionita, Thomas Madeley, Adarsh Karan Kesavadas Prasanth
+</em>
+</p>
+
+We are a team of four passionate robotics engineers from the University of Manchester's MSc Robotics cohort (2023/2024 batch):
+- Jingchuan Lin
+- Ionut Ionita
+- Thomas Madeley
+- Adarsh Karan Kesavadas Prasanth
+
+### Bridging Theory and Real-World Robotics
+
+Our year-long capstone project, the LEO Rover Design Project, provided a valuable opportunity to bridge the gap between theoretical knowledge and the practical challenges of real-world robotics. We successfully designed, developed, and tested a functional LEO rover equipped with the following capabilities:
+
+- **Autonomous Exploration and Navigation:** Utilizing LiDAR technology, the LEO rover can autonomously explore and navigate unknown environments. This feat involves obstacle detection, path planning algorithms, and real-time decision-making to ensure safe and efficient exploration.
+- **Intelligent Object Detection:** Employing an Intel RealSense depth camera, the LEO rover can effectively detect target objects within its surroundings. This object detection is critical for identifying and locating the desired items for manipulation.
+- **Precise Object Retrieval:** Equipped with a 5-DoF manipulator arm, the LEO rover can successfully retrieve the identified target object. This complex task requires accurate object recognition, dexterous arm control, and sophisticated manipulation techniques.
+
+Each of the functions is explained in the following sections:
 
 ### Autonomous Navigation and SLAM
 A navigation algorithm has been developed for the Leo Rover to autonomously explore unknown environments and return to its initial location. The navigation utilizes the Nav2 stack in ROS2, while mapping is conducted using the SLAM_toolbox. The rover localizes itself using data from Lidar, odometry, and IMU sensors in the simulated Gazebo world. Exploration is facilitated through Frontier Based Exploration techniques. 
