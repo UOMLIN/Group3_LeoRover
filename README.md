@@ -7,7 +7,7 @@
 </p>
 
 ### Autonomous Navigation and SLAM
-A navigation algorithm has been developed for the Leo Rover to autonomously explore unknown environments and return to its initial location. The navigation utilizes Nav2 stack in ROS2, while mapping is conducted using SLAM_toolbox. The rover localizes itself using data from Lidar, odometry, and IMU sensors in the simulated Gazebo world. Exploration is facilitated through Frontier Based Exploration techniques. 
+A navigation algorithm has been developed for the Leo Rover to autonomously explore unknown environments and return to its initial location. The navigation utilizes the Nav2 stack in ROS2, while mapping is conducted using the SLAM_toolbox. The rover localizes itself using data from Lidar, odometry, and IMU sensors in the simulated Gazebo world. Exploration is facilitated through Frontier Based Exploration techniques. 
 <p align="center">
   <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/navigation&slam/LeoRover%20navigating%20autonomously%20in%20an%20unknown%20environment.png?raw=true" alt="Navigation" width="600">
   <br>
