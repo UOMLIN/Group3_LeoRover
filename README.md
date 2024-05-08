@@ -6,6 +6,10 @@
   <em>Leo Rover</em>
 </p>
 
+## Glimplse
+https://github.com/UOMLIN/Group3_LeoRover/assets/112091438/49de4f61-89bc-4516-8ed4-0ec84178d417
+
+
 ## Table of Contents
 - [Who are we?](#who-are-we)
 - [Bridging Theory and Real-World Robotics](#robot-implementation)
@@ -192,3 +196,8 @@ Mechanically there are two main areas of the project: the equipment mounting str
   <em>Mechanical Design
 </em>
 </p>
+
+## Requirements Video
+
+https://github.com/UOMLIN/Group3_LeoRover/assets/112091438/dee035ed-5fe2-494e-ad97-151e56923ac9
+
