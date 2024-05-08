@@ -6,7 +6,7 @@
   <em>Leo Rover</em>
 </p>
 
-## Glimplse
+## Check out the Glimplse!
 https://github.com/UOMLIN/Group3_LeoRover/assets/112091438/49de4f61-89bc-4516-8ed4-0ec84178d417
 
 
@@ -14,6 +14,7 @@ https://github.com/UOMLIN/Group3_LeoRover/assets/112091438/49de4f61-89bc-4516-8e
 - [Who are we?](#who-are-we)
 - [Bridging Theory and Real-World Robotics](#robot-implementation)
 - [Autonomous Navigation and SLAM](#autonomous-navigation-and-slam)
+- [Object Detection](#object-detection)
 - [Component Interaction](#component-interaction)
 - [Electrical Design](#electrical-design)
   - [Power Connection diagram](#power-connection-diagram)
@@ -60,6 +61,10 @@ The entire setup is visualized using the Rviz tool and must now be implemented o
   <br>
   <em>RViz Visualization</em>
 </p>
+
+### Object Detection<a name="object-detection"></a>
+
+For object detection, an Intel RealSense RGB-D camera D435i was employed in conjunction with a YOLOv7 model. The model, trained on a custom dataset of colored blocks, successfully identifies objects and outputs their positions (x, y, and z coordinates) along with their orientation (flat or upright) relative to the surface.
 
 ### Component Interaction <a name="component-interaction"></a>
 
