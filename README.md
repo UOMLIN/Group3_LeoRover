@@ -6,6 +6,12 @@
   <em>Leo Rover</em>
 </p>
 
+<p align="center">
+  <img src="https://github.com/UOMLIN/Group3_LeoRover/blob/main/Pictures/Final%20Leo.jpg?raw=true?raw=true" alt="Our Team" width="800">
+  <br>
+  <em>Our Team</em>
+</p>
+
 ## Check out the Glimplse!
 https://github.com/UOMLIN/Group3_LeoRover/assets/112091438/49de4f61-89bc-4516-8ed4-0ec84178d417
 
